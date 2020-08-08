@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "An Electron Typescript boilerplate",
   "scripts": {
-    "get": "yarn",
-    "get-cpx":"npm i cpx --global",
+    "globals": "npm install yarn cpx --global",
+    "get":"yarn",
     "cp": "cpx src/views/*.{html,png,jpg} dist/views/",
     "build": "tsc",
     "watch": "tsc -w",
