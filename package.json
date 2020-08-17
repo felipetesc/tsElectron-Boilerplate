@@ -2,6 +2,7 @@
   "name": "ts-electron-boilerplate",
   "version": "1.0.0",
   "description": "An Electron Typescript boilerplate",
+  "main": "dist/main.js",
   "scripts": {
     "install-global-modules": "npm install yarn cpx --global",
     "download-modules":"yarn",
