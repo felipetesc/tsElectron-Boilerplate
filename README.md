@@ -15,4 +15,4 @@ Boilerplate for Electron using Typescript
 9)  Use **yarn run "pack** to package your app(check package.json for specific flags)
 10) Use **yarn run "dist** to package your app(check package.json for specific flags) and to create a distribuition installer
 
-### Project based on https://github.com/electron/electron-quick-start-typescript
+#### Tip: If you are using VS Code you can call every npm command by clicking on the **NPM Scripts** Frame item 
