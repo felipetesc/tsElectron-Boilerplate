@@ -1,15 +1,19 @@
 {
-  "name": "app",
+  "name": "ts-electron-boilerplate",
   "version": "1.0.0",
   "description": "An Electron Typescript boilerplate",
   "scripts": {
-    "globals": "npm install yarn cpx --global",
-    "get":"yarn",
-    "cp": "cpx src/views/*.{html,png,jpg} dist/views/",
-    "build": "tsc",
-    "watch": "tsc -w",
+    "install-global-modules": "npm install yarn cpx --global",
+    "download-modules":"yarn",
+    "copy-static-assets": "cpx src/static/*.{html,png,jpg} dist/static/",
+    "compile-ts": "tsc",
+    "watch-ts": "tsc -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "npm run build && electron ./dist/main.js"
+    "compile-n-run-dev": "yarn run compile-ts && electron ./dist/main.js",
+    "run-dev": "electron ./dist/main.js",
+    "pack":"electron-builder --dir",
+    "dist": "electron-builder"
+
   },
   "repository": "https://github.com/felipetesc/tsElectron-Boilerplate",
   "keywords": [
@@ -23,6 +27,28 @@
     "@types/node": "12.12.6",
     "electron": "~9.2.0",
     "tslint": "~6.1.3",
-    "typescript": "~3.9.7"
+    "typescript": "~3.9.7",
+    "electron-builder": "^22.8.0"
+  },
+  "build": {
+    "appId": "tsElectronBoilerplate",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    },
+    "publish": null,
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win":{
+
+    },
+    "linux":{
+
+    }
   }
 }
